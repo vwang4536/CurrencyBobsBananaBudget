@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Output = (props) => {
   const { numberOfDays, startDate, totalCost } = props;
@@ -9,5 +10,11 @@ const Output = (props) => {
       <h3>Total Cost: ${totalCost}</h3>
     </div>
   );
+};
+
+Output.propTypes = {
+  numberOfDays: PropTypes.string,
+  startDate: PropTypes.string,
+  totalCost: PropTypes.number,
 };
 export default Output;
