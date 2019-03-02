@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Input = (props) => {
   const { handleCost, handleNumberOfDays, handleStartDate } = props;
@@ -11,4 +12,9 @@ const Input = (props) => {
   );
 };
 
+Input.propTypes = {
+  handleCost: PropTypes.func,
+  handleStartDate: PropTypes.func,
+  handleNumberOfDays: PropTypes.func,
+};
 export default Input;
