@@ -6,7 +6,7 @@ Bob's Banana Budget Tool to check the total cost of the bananas Bob buys. This a
     - Installation:
         - For MacOS users - download Redis and follow the instructions here: https://redis.io/download
 
-        -For Windows users - download the Windows version of Redis and follow the instructions here: https://github.com/MicrosoftArchive/redis/releases
+        - For Windows users - download the Windows version of Redis and follow the instructions here: https://github.com/MicrosoftArchive/redis/releases
 
 - Fork and Clone this Repository
 - Open project directory
