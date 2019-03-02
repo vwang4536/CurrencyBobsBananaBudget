@@ -38,7 +38,7 @@ class App extends Component {
         .then(res => res.json())
         .then(res => this.setState({
           totalCost: Number(res.totalCost),
-        }))
+        }));
     }
   }
 
@@ -50,10 +50,7 @@ class App extends Component {
       <div>
         <h1>Bob&#8217;s Banana Budget Tool</h1>
         <h2>Please enter your start date and number of days</h2>
-        <div>
-          <input type="date" className="startDate" onChange={this.handleStartDate} />
-          <input type="number" className="numberOfDays" onChange={this.handleNumberOfDays} />
-        </div>
+
         <div>
           <h3>Start Date: {startDate} </h3>
           <h3>Number of Days: {numberOfDays} </h3>
