@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post('/api/handleCost', (req, res) => {
+app.post('/api/handleCost', costHandling, (req, res) => {
   res.send({ totalCost: Number(res.locals.totalCost) });
 });
 

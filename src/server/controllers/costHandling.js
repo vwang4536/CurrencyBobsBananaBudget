@@ -46,4 +46,4 @@ const costHandling = (req, res, next) => {
   });
 };
 
-module.exports = costHandling
+module.exports = costHandling;
