@@ -22,10 +22,18 @@ module.exports = {
       },
     ],
   },
+  devServer: {
+    contentBase: './dist',
+    historyApiFallback: true,
+    port: 8080,
+    proxy: {
+      '/api': 'http://localhost:3000',
+    },
+  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, "/index.html"),
-      filename: path.join(__dirname, "/dist/index.html")
+      template: path.join(__dirname, '/index.html'),
+      filename: path.join(__dirname, '/dist/index.html'),
     }),
   ],
 };

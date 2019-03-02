@@ -12,24 +12,43 @@ class App extends Component {
     this.handleNumberOfDays = this.handleNumberOfDays.bind(this);
     this.handleStartDate = this.handleStartDate.bind(this);
   }
+
   handleNumberOfDays(event) {
     this.setState({
       numberOfDays: event.target.value,
     });
   }
+
   handleStartDate(event) {
     this.setState({
       startDate: event.target.value,
     });
   }
-  handleCost() {}
+
+  handleCost() {
+    const { startDate, numberOfDays } = this.state;
+    if (startDate && numberOfDays) {
+      fetch('/api/handleCost', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ startDate, numberOfDays: Number(numberOfDays) }),
+      })
+        .then(res => res.json())
+        .then(res => this.setState({
+          totalCost: Number(res.totalCost),
+        }))
+    }
+  }
+
   render() {
     const {
       numberOfDays, startDate, totalCost,
     } = this.state;
     return (
       <div>
-        <h1>Bob's Banana Budget Tool</h1>
+        <h1>Bob&#8217;s Banana Budget Tool</h1>
         <h2>Please enter your start date and number of days</h2>
         <div>
           <input type="date" className="startDate" onChange={this.handleStartDate} />
