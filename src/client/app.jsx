@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Input from './input.jsx';
+import Output from './output.jsx';
 
 class App extends Component {
   constructor(props) {
