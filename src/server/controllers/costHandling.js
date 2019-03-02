@@ -26,8 +26,24 @@ const costHandling = (req, res, next) => {
       const copy = new Date(startDate);
       let totalCost = 0;
       for (let i = 0; i < numberOfDays; i += 1) {
-        
+        let current = copy.setDate(start.getDate() + i);
+        current = new Date(current);
+        if (current.getDay() >= 1 && current.getDay() <= 5) {
+          if (current.getDate() <= 7) totalCost += 0.05;
+          if (current.getDate() > 7 && current.getDate() <= 14) totalCost += 0.10;
+          if (current.getDate() > 14 && current.getDate() <= 21) totalCost += 0.15;
+          if (current.getDate() > 21 && current.getDate() <= 28) totalCost += 0.20;
+          if (current.getDate() > 28) totalCost += 0.25;
+        }
       }
+      client.set(key, totalCost);
+      res.locals.totalCost = totalCost;
+      next();
+    } else {
+      res.locals.totalCost = data;
+      next();
     }
-  })
+  });
 };
+
+module.exports = costHandling
