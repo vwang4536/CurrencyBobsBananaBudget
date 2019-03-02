@@ -53,13 +53,10 @@ class App extends Component {
         <h1>Bob&#8217;s Banana Budget Tool</h1>
         <h2>Please enter your start date and number of days</h2>
         <Input handleCost={this.handleCost} handleNumberOfDays={this.handleNumberOfDays} handleStartDate={this.handleStartDate} />
-        <div>
-          <h3>Start Date: {startDate} </h3>
-          <h3>Number of Days: {numberOfDays} </h3>
-          <h3>Total Cost: ${totalCost}</h3>
-        </div>
+        <h2>Output:</h2>
+        <Output numberOfDays={numberOfDays} startDate={startDate} totalCost={totalCost} />
       </div>
-    )
+    );
   }
 }
 
