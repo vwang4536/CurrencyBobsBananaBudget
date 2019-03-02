@@ -1,0 +1,34 @@
+{
+  "name": "currencybobsbananabudget",
+  "version": "1.0.0",
+  "description": "Bob's Banana Budget Tool to check the total cost of the bananas Bob buys",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vwang4536/CurrencyBobsBananaBudget.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vwang4536/CurrencyBobsBananaBudget/issues"
+  },
+  "homepage": "https://github.com/vwang4536/CurrencyBobsBananaBudget#readme",
+  "dependencies": {
+    "html-webpack-plugin": "^3.2.0",
+    "react": "^16.8.3",
+    "react-dom": "^16.8.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "nodemon": "^1.18.10",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.2.1"
+  }
+}
