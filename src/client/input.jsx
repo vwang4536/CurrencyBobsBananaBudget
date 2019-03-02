@@ -12,6 +12,7 @@ const Input = (props) => {
   );
 };
 
+// validates the type of props with PropTypes
 Input.propTypes = {
   handleCost: PropTypes.func,
   handleStartDate: PropTypes.func,

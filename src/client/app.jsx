@@ -15,6 +15,7 @@ class App extends Component {
     this.handleStartDate = this.handleStartDate.bind(this);
   }
 
+  // method to handle fetching of totalCost based on inputs
   handleCost() {
     const { startDate, numberOfDays } = this.state;
     if (startDate && numberOfDays) {
@@ -32,12 +33,14 @@ class App extends Component {
     }
   }
 
+  // method to handle inputted numberOfDays and change the state with the new numberOfDays
   handleNumberOfDays(event) {
     this.setState({
       numberOfDays: event.target.value,
     });
   }
 
+  // method to handle inputted startDate and changes the state with the new startDate
   handleStartDate(event) {
     this.setState({
       startDate: event.target.value,

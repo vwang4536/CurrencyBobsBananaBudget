@@ -12,6 +12,7 @@ const Output = (props) => {
   );
 };
 
+// validates the types of props with PropTypes
 Output.propTypes = {
   numberOfDays: PropTypes.string,
   startDate: PropTypes.string,
