@@ -15,18 +15,6 @@ class App extends Component {
     this.handleStartDate = this.handleStartDate.bind(this);
   }
 
-  handleNumberOfDays(event) {
-    this.setState({
-      numberOfDays: event.target.value,
-    });
-  }
-
-  handleStartDate(event) {
-    this.setState({
-      startDate: event.target.value,
-    });
-  }
-
   handleCost() {
     const { startDate, numberOfDays } = this.state;
     if (startDate && numberOfDays) {
@@ -42,6 +30,18 @@ class App extends Component {
           totalCost: Number(res.totalCost),
         }));
     }
+  }
+
+  handleNumberOfDays(event) {
+    this.setState({
+      numberOfDays: event.target.value,
+    });
+  }
+
+  handleStartDate(event) {
+    this.setState({
+      startDate: event.target.value,
+    });
   }
 
   render() {

@@ -9,7 +9,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 app.post('/api/handleCost', costHandling, (req, res) => {
-  res.send({ totalCost: Number(res.locals.totalCost) });
+  res.send({ totalCost: Number(res.locals.totalCost).toFixed(2) });
 });
 
 app.listen(PORT, () => console.log(`Server started on ${PORT}`));
