@@ -7,7 +7,8 @@
     "webpack": "webpack",
     "build": "webpack --mode production",
     "dev": "webpack-dev-server --open --config webpack.config.js",
-    "start": "nodemon ./src/server/server.js"
+    "start": "nodemon ./src/server/server.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -33,7 +34,9 @@
     "@babel/preset-env": "^7.3.4",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.5",
+    "jest": "^24.1.0",
     "nodemon": "^1.18.10",
+    "supertest": "^3.4.2",
     "webpack": "^4.29.6",
     "webpack-cli": "^3.2.3",
     "webpack-dev-server": "^3.2.1"
