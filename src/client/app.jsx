@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Input from './input.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -50,7 +51,7 @@ class App extends Component {
       <div>
         <h1>Bob&#8217;s Banana Budget Tool</h1>
         <h2>Please enter your start date and number of days</h2>
-
+        <Input handleCost={this.handleCost} handleNumberOfDays={this.handleNumberOfDays} handleStartDate={this.handleStartDate} />
         <div>
           <h3>Start Date: {startDate} </h3>
           <h3>Number of Days: {numberOfDays} </h3>

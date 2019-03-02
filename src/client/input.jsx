@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Input = (props) => {
-  const { handleCost, handleStartDate, handleNumberOfDays } = props;
+  const { handleCost, handleNumberOfDays, handleStartDate } = props;
   return (
     <div>
       <input type="date" className="startDate" onChange={handleStartDate} />
