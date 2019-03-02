@@ -10,7 +10,7 @@ client.on('connect', () => {
 const costHandling = (req, res, next) => {
   let { startDate, numberOfDays } = req.body;
   numberOfDays = Number(numberOfDays);
-  if (startDate === undefined || numberOfDays === undefined) {
+  if (startDate === undefined || Number.isNaN(numberOfDays)) {
     return res.status(400).send('ERROR! Start date or number of days need to be set');
   }
   if (numberOfDays === 0) {
@@ -36,8 +36,10 @@ const costHandling = (req, res, next) => {
           if (current.getDate() > 28) totalCost += 0.25;
         }
       }
+      console.log(typeof totalCost)
       client.set(key, totalCost);
       res.locals.totalCost = totalCost;
+      console.log(res.locals.totalCost)
       next();
     } else {
       res.locals.totalCost = data;
